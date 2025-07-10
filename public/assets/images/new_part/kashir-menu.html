@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sidebar with Image Gallery</title>
+    <style>
+        /* Main page styling */
+            body {
+                margin: 0;
+                font-family: Euclid Circular A;
+                display: flex;
+                flex-wrap: nowrap; 
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                width: 100%;
+                max-width: 600px;
+                margin-bottom: 0px;
+                padding: 0px;
+                
+            }
+
+            .image {
+                width: 100%;
+                height: auto;
+            }
+
+            .image:nth-child(1),
+            .image:nth-child(2) {
+                border-bottom: 1px solid rgb(173, 170, 170);
+            }
+
+            .image:nth-child(2),
+            .image:nth-child(4) {
+                border-left: 1px solid rgb(173, 170, 170);
+            }
+            .image:nth-child(3),
+            .image:nth-child(4) {
+                border-bottom: 1px solid rgb(173, 170, 170);
+            }
+            .container {
+                gap: 1;
+            }
+            .tow-con {
+                display: flex;
+                flex-direction: row;
+                margin: 10px;
+                border-radius: 12px;
+                padding: 20px;
+            }
+            .container_2 {
+                border-left: 1px solid rgb(173, 170, 170);
+            }
+            /* Media Queries */
+            @media (max-width: 768px) {
+            /* .container {
+                flex-direction: column;
+            } */
+
+            .container {
+                /* border-left: none;
+                border-top: 1px solid rgb(173, 170, 170); */
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto auto;
+            }
+
+            .container:first-child {
+                border-top: none;
+            }
+        }
+            .links{
+                text-decoration: none;
+                font-size: large;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr  ;
+                grid-template-rows: auto auto auto;
+            }
+        }
+        /* Sidebar styling */
+        .sidebar {
+            width: 300px;
+            background-color: #252826;
+            padding: 20px;
+            position: fixed;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            backdrop-filter: #252826(20px);
+            transition: width 0.4s;
+
+        }
+
+        /* Styling for the image gallery section */
+        .content {
+            margin-left: 300px; /* Space for the sidebar */
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 200px; /* Width for each image */
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive styling for mobile */
+        @media (max-width: 768px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+            }
+            .content {
+                margin-left: 0;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar section -->
+    <div class="sidebar">
+        <h2>Main Menu</h2>
+        <a href="#" class="links">Phones</a>
+        <a href="#" class="links">Clothing</a>
+        <a href="#" class="links">Fashion</a>
+        <a href="#" class="links">watches</a>
+        <a href="#" class="links">ladies cosmetics</a>
+        <a href="#" class="links">Home Appliances</a>
+        <a href="#" class="links">Discount</a>
+        <a href="#" class="links">new porduct</a>
+    </div>
+
+    <!-- Image gallery section -->
+    <div class="content">
+        <!-- Add some sample images -->
+        <div class="tow-con">
+            <div class="container_1">
+                <div class="container">
+                    <img src="new5.webp" alt="Image 1" class="image">
+                    <img src="new6.webp" alt="Image 2" class="image">
+                    <img src="new7.webp" alt="Image 3" class="image">
+                    <img src="new8.webp" alt="Image 4" class="image">
+                </div>
+                <div class="container">
+                    <img src="new5.webp" alt="Image 1" class="image">
+                    <img src="new6.webp" alt="Image 2" class="image">
+                    <img src="new7.webp" alt="Image 3" class="image">
+                    <img src="new8.webp" alt="Image 4" class="image">
+                </div>
+                <div class="container">
+                    <img src="new5.webp" alt="Image 1" class="image">
+                    <img src="new6.webp" alt="Image 2" class="image">
+                    <img src="new7.webp" alt="Image 3" class="image">
+                    <img src="new8.webp" alt="Image 4" class="image">
+                </div>
+            </div>
+            <div class="container_2">
+                <div class="container">
+                    <img src="new5.webp" alt="Image 1" class="image">
+                    <img src="new6.webp" alt="Image 2" class="image">
+                    <img src="new7.webp" alt="Image 3" class="image">
+                    <img src="new8.webp" alt="Image 4" class="image">
+                </div>
+                <div class="container">
+                    <img src="new5.webp" alt="Image 1" class="image">
+                    <img src="new6.webp" alt="Image 2" class="image">
+                    <img src="new7.webp" alt="Image 3" class="image">
+                    <img src="new8.webp" alt="Image 4" class="image">
+                </div>
+                <div class="container">
+                    <img src="new5.webp" alt="Image 1" class="image">
+                    <img src="new6.webp" alt="Image 2" class="image">
+                    <img src="new7.webp" alt="Image 3" class="image">
+                    <img src="new8.webp" alt="Image 4" class="image">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

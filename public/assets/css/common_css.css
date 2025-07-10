@@ -1,0 +1,297 @@
+/* This file contais common styles between main page and catagory page */
+
+
+
+
+/* Slider styles */
+
+.slider{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    height: 350px;
+    width: 99%;
+    overflow: hidden;
+}
+
+.slider:hover .back {
+    display: inline-block;
+}
+
+.slider:hover .next {
+    display: inline-block;
+}
+
+.slider img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.current-slide{
+    display: inline-block;
+    transform: translateX(0%);
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.slide{
+    transition: all 0.5s ease-in-out;
+}
+
+.previos-slide{
+    transform: translateX(100%);
+    z-index: -1;
+}
+
+.none{
+    transform: translateX(-100%);
+    z-index: -1;
+}
+
+.display-none{
+    display: none;
+}
+
+
+.slider >
+.back {
+    display: none;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotateY(180deg);
+    width: 3%;
+    height: 10%;
+    z-index: 3;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.slider >
+.next {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3%;
+    height: 10%;
+    z-index: 3;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/* Slider styles */
+
+
+/* Amazing Part styles */
+
+
+.amazing-test {
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.amazing{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 94%;
+    height: 300px;
+    background-color: #A044FF;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding-left: 40px;
+}
+
+.amazing-test
+.timer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 30px;
+    margin-top: 10px;
+    background-color: #A044FF;
+    width: 20%;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.text-container{
+    color: #fff;
+    text-align: center;
+}
+
+.offers{
+    display: flex;
+    flex-direction: row;
+    width: 88%;
+    height: 250px;
+    padding-right: 2%;
+    overflow-y: scroll;
+    transition: all 1s ease-in-out;
+}
+
+.offers::-webkit-scrollbar {
+    display: none;
+}
+
+.offer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 200px;
+    max-width: 100px;
+    height: 90%;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.offer
+.img-and-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    text-wrap: wrap;
+    color: gray;
+}
+
+.offer
+.img-and-text-container
+img {
+    width: 40%;
+}
+
+.prices-and-discount-container
+.new-price-and-discount-con {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+    height: fit-content;
+}
+
+.prices-and-discount-container
+.new-price-and-discount-con
+.discount {
+    color: white;
+    background-color: #A044FF;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.prices-and-discount-container
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+.next-amaz-offer {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.perv-amaz-offer {
+    position: absolute;
+    left: 15%;
+    top: 46%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+/* Amazing part styles */
+
+
+/* Best selling products styles */
+
+.best-selling-products-main-con
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.best-selling-products {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: rgba(150, 143, 143, 0.928) 0.5px solid;
+    border-radius: 20px;
+    width: 95%;
+    height: 400px;
+    padding: 10px;
+    overflow: scroll;
+}
+
+.best-selling-products::-webkit-scrollbar  {
+    display: none;
+}
+
+.best-selling-products
+.product {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.best-selling-products
+.product
+.product-text {
+    margin-right: 10px;
+}
+
+.best-selling-products
+.product
+img {
+    width: 90px;
+    border-radius: 10px;
+}
+
+
+/* Best selling products styles */
